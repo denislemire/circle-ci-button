@@ -15,6 +15,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: "Run nginx"
+          command: nginx
+      - run:
           name: "Run curl"
           command: curl localhost
 
