@@ -5,16 +5,12 @@ describe('b-spec', () => {
       cy.visit(Cypress.env('HOST') || 'htdocs/index.html')
     })
 
-    it('Check h1 display', () => {
+    it('Click my button', () => {
       cy.get('#HiddenText')
         .should('have.attr','style','display: none')
-    })
 
-    it('Click my button', () => {
       cy.get('#MyButton').click() // Click on button
-    })
 
-    it('Check h1 display', () => {
       cy.get('#HiddenText')
         .should('have.attr','style','display: block')
     })
