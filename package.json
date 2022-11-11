@@ -1,7 +1,7 @@
 {
-  "name": "cypress-example-docker-circle",
+  "name": "circle-ci-button",
   "version": "3.0.0",
-  "description": "Cypress + Docker + CircleCI = ❤️",
+  "description": "Simple button webapp with CircleCI cypress checks"
   "main": "index.js",
   "private": true,
   "scripts": {
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cypress-io/cypress-example-docker-circle.git"
+    "url": "git+https://github.com/denislemire/circle-ci-button.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cypress-io/cypress-example-docker-circle/issues"
+    "url": "https://github.com/denislemire/circle-ci-button/issues"
   },
-  "homepage": "https://github.com/cypress-io/cypress-example-docker-circle#readme",
+  "homepage": "https://github.com/denislemire/circle-ci-button#readme",
   "devDependencies": {
     "cypress": "^4.9.0",
     "mocha": "^4.0.1",
