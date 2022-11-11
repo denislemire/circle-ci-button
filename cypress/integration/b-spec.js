@@ -7,12 +7,12 @@ describe('b-spec', () => {
 
     it('Click my button', () => {
       cy.get('#HiddenText')
-        .should('have.attr','style','display: none')
+        .should('have.attr','style','display: none;')
 
       cy.get('#MyButton').click() // Click on button
 
       cy.get('#HiddenText')
-        .should('have.attr','style','display: block')
+        .should('have.attr','style','display: block;')
     })
   })
 })
