@@ -1,7 +1,7 @@
 {
   "name": "circle-ci-button",
   "version": "3.0.0",
-  "description": "Simple button webapp with CircleCI cypress checks"
+  "description": "Simple button webapp with CircleCI cypress checks",
   "main": "index.js",
   "private": true,
   "scripts": {
