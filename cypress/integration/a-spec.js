@@ -2,7 +2,7 @@ describe('a-spec', () => {
   describe('page', () => {
     beforeEach(() => {
       debugger
-      cy.visit(Cypress.env('HOST') || 'index.html')
+      cy.visit(Cypress.env('HOST') || 'htdocs/index.html')
     })
 
     it('has h2', () => {
