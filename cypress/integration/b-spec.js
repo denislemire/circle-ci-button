@@ -8,5 +8,10 @@ describe('b-spec', () => {
     it('Click my button', () => {
       cy.get('#MyButton').click() // Click on button
     })
+
+    it('Check h1 display', () => {
+      cy.get('#HiddenText')
+        .should('have.css', 'display', 'block')
+    })
   })
 })
