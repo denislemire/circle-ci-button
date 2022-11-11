@@ -1,12 +1,18 @@
-describe('a-spec', () => {
+describe('b-spec', () => {
   describe('page', () => {
     beforeEach(() => {
       debugger
       cy.visit(Cypress.env('HOST') || 'htdocs/index.html')
     })
 
-    it('has h1', () => {
-      cy.contains('h1', 'Amazing!')
+    it('Click my button', () => {
+      cy.get('#HiddenText')
+        .should('have.attr','style','display: none')
+
+      cy.get('#MyButton').click() // Click on button
+
+      cy.get('#HiddenText')
+        .should('have.attr','style','display: block;')
     })
   })
 })
