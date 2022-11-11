@@ -5,8 +5,8 @@ describe('a-spec', () => {
       cy.visit(Cypress.env('HOST') || 'htdocs/index.html')
     })
 
-    it('has h2', () => {
-      cy.contains('h2', 'test')
+    it('has h1', () => {
+      cy.contains('h1', 'Amazing!')
     })
   })
 })
