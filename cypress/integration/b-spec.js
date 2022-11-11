@@ -11,7 +11,7 @@ describe('b-spec', () => {
 
     it('Check h1 display', () => {
       cy.get('#HiddenText')
-        .should('have.css', 'display', 'none')
+        .should('have.attr','style','display: none')
     })
   })
 })
