@@ -1,5 +1,16 @@
 version: 2
 
+workflows: # Define a Workflow running the build job, then the deploy job
+    version: 2
+    build-deploy:
+    jobs:
+        - build
+        - deploy:
+            requires:
+            - build
+            filters:
+            branches:
+                only: deploy # Only deploys when the commit is on the Main branch
 jobs:
   build:
     docker:
@@ -37,3 +48,13 @@ jobs:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
+  deploy:
+    docker: # Specify executor for running deploy job
+      - image: cimg/base:stable
+    steps:
+          - run:
+              name: "Say hello"
+              command: "echo Hello, World!"
+          - run: # Install the AWS CLI if it is not already included in the docker image
+              name: Install awscli
+              command: sudo pip install awscli
