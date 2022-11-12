@@ -47,7 +47,7 @@ jobs:
             - "e8:bd:31:da:57:d0:22:d9:b0:52:b4:58:3e:fe:c0:6e"
       - run:
           name: "Populate known_hosts"
-          command: mkdir p ~/.ssh && ssh-keyscan -H $SSH_HOST > ~/.ssh/known_hosts
+          command: mkdir -p ~/.ssh && ssh-keyscan -H $SSH_HOST > ~/.ssh/known_hosts
       - run:
           name: "Copy static files"
           command: scp -rp htdocs/* $SSH_USER@$SSH_HOST:/var/www/html
