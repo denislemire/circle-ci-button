@@ -1,0 +1,12 @@
+#HiddenText
+{
+	color: red;
+	border: 3px solid red;
+	border-radius: 15px;
+	margin: 10px;
+	padding: 10px;
+	font-family: helvetica, sans-serif;
+	width: 200px;
+	text-align: center;
+	transform: rotate(-6deg); 
+}
